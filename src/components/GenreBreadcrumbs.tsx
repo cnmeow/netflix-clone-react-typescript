@@ -25,7 +25,7 @@ export default function GenreBreadcrumbs({
   return (
     <Breadcrumbs separator={Separator} {...others}>
       {genres.map((genre, idx) => (
-        <Typography key={idx} sx={{ color: "text.primary" }}>
+        <Typography key={genre} sx={{ color: "text.primary" }}>
           {genre}
         </Typography>
       ))}

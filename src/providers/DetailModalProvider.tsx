@@ -36,7 +36,7 @@ export default function DetailModalProvider({
       if (!!newDetailType.id && newDetailType.mediaType) {
         const response = await getAppendedVideos({
           mediaType: newDetailType.mediaType,
-          id: newDetailType.id as number,
+          id: newDetailType.id,
         }).unwrap();
         setDetail({ ...newDetailType, mediaDetail: response });
       } else {

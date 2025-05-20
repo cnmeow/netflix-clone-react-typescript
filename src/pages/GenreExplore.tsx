@@ -13,8 +13,9 @@ import {
 } from "src/store/slices/genre";
 import store from "src/store";
 
+type LoaderData = CustomGenre | Genre | undefined;
 export async function loader({ params }: LoaderFunctionArgs) {
-  let genre: CustomGenre | Genre | undefined = COMMON_TITLES.find(
+  let genre: LoaderData = COMMON_TITLES.find(
     (t) => t.apiString === (params.genreId as string)
   );
   if (!genre) {
